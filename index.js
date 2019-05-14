@@ -10,9 +10,9 @@ require("./startup/db")();
 // if (process.env.NODE_ENV === 'production')
 require("./startup/prod")(app);
 
-app.use(express.static(__dirname + "/apidoc"));
+app.use(express.static(__dirname + "/docs"));
 app.get("/api", (req, res) => {
-  res.sendFile(__dirname + "/apidoc/index.html");
+  res.sendFile(__dirname + "/docs/index.html");
 });
 
 const port = process.env.PORT || 3000;
