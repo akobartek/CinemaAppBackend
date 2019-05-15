@@ -31,14 +31,14 @@ define({ "api": [
           },
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Array",
             "optional": false,
             "field": "seats",
             "description": "<p>Seats that was reserved with this order.</p>"
           },
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Array",
             "optional": false,
             "field": "ticketType",
             "description": "<p>Type of tickets reserved.</p>"
@@ -61,7 +61,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n {\n     \"_id\": \"3ab30d7f1b26580016067995\",\n     \"movieId\": 343611,\n     \"date\": \"12.05.2018\",\n     \"time\": \"20:00\",\n     \"seats\": [\"1-1\", \"1-2\", \"1-3\"],\n     \"ticketType\": 0,\n     \"orderDate\": \"2019-04-14T12:44:36.963Z\"\n     \"__v\": 0\n }",
+          "content": "HTTP/1.1 200 OK\n {\n     \"_id\": \"3ab30d7f1b26580016067995\",\n     \"movieId\": 343611,\n     \"date\": \"12.05.2018\",\n     \"time\": \"20:00\",\n     \"seats\": [\"1-1\", \"1-2\", \"1-3\"],\n     \"ticketType\": [\"0-3\", \"1-2\"],\n     \"orderDate\": \"2019-04-14T12:44:36.963Z\"\n     \"__v\": 0\n }",
           "type": "json"
         }
       ]
@@ -116,7 +116,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n {\n     \"_id\": \"3ab30d7f1b26580016067995\",\n     \"movieId\": 343611,\n     \"date\": \"12.05.2018\",\n     \"time\": \"20:00\",\n     \"seats\": [\"1-1\", \"1-2\", \"1-3\"],\n     \"ticketType\": 0,\n     \"orderDate\": \"2019-04-14T12:44:36.963Z\"\n     \"__v\": 0\n }",
+          "content": "HTTP/1.1 200 OK\n {\n     \"_id\": \"3ab30d7f1b26580016067995\",\n     \"movieId\": 343611,\n     \"date\": \"12.05.2018\",\n     \"time\": \"20:00\",\n     \"seats\": [\"1-1\", \"1-2\", \"1-3\"],\n     \"ticketType\": [\"0-3\", \"1-2\"],\n     \"orderDate\": \"2019-04-14T12:44:36.963Z\"\n     \"__v\": 0\n }",
           "type": "json"
         }
       ]
@@ -184,7 +184,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n {\n     \"_id\": \"3ab30d7f1b26580016067995\",\n     \"movieId\": 343611,\n     \"date\": \"12.05.2018\",\n     \"time\": \"20:00\",\n     \"seats\": [\"1-1\", \"1-2\", \"1-3\"],\n     \"ticketType\": 0,\n     \"orderDate\": \"2019-04-14T12:44:36.963Z\"\n     \"__v\": 0\n }",
+          "content": "HTTP/1.1 200 OK\n {\n     \"_id\": \"3ab30d7f1b26580016067995\",\n     \"movieId\": 343611,\n     \"date\": \"12.05.2018\",\n     \"time\": \"20:00\",\n     \"seats\": [\"1-1\", \"1-2\", \"1-3\"],\n     \"ticketType\": [\"0-3\", \"1-2\"],\n     \"orderDate\": \"2019-04-14T12:44:36.963Z\"\n     \"__v\": 0\n }",
           "type": "json"
         }
       ]
@@ -226,7 +226,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n[\n     {\n         \"_id\": \"3ab30d7f1b26580016067995\",\n         \"movieId\": 343611,\n         \"date\": \"12.05.2018\",\n         \"time\": \"20:00\",\n         \"seats\": [\"1-1\", \"1-2\", \"1-3\"],\n         \"ticketType\": 0,\n         \"orderDate\": \"2019-04-14T12:44:36.963Z\"\n         \"__v\": 0\n     }\n ]",
+          "content": "HTTP/1.1 200 OK\n[\n     {\n         \"_id\": \"3ab30d7f1b26580016067995\",\n         \"movieId\": 343611,\n         \"date\": \"12.05.2018\",\n         \"time\": \"20:00\",\n         \"seats\": [\"1-1\", \"1-2\", \"1-3\"],\n         \"ticketType\": [\"0-3\", \"1-2\"],\n         \"orderDate\": \"2019-04-14T12:44:36.963Z\"\n         \"__v\": 0\n     }\n ]",
           "type": "json"
         }
       ]

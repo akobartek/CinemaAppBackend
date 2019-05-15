@@ -30,10 +30,13 @@ const Order = mongoose.model(
         trim: true
       }
     ],
-    ticketType: {
-      type: Number,
-      required: true
-    },
+    ticketType: [
+      {
+        type: String,
+        required: true,
+        trim: true
+      }
+    ],
     orderDate: {
       type: Date,
       default: Date.now
@@ -52,8 +55,8 @@ function validateOrder(order) {
       .min(3)
       .max(5)
       .required(),
-    seats: Joi.required(),
-    ticketType: Joi.number().required(),
+    seats: Joi.array().required(),
+    ticketType: Joi.array().required(),
     orderDate: Joi.date()
   };
 

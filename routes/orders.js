@@ -17,7 +17,7 @@ const router = express.Router();
  *              "date": "12.05.2018",
  *              "time": "20:00",
  *              "seats": ["1-1", "1-2", "1-3"],
- *              "ticketType": 0,
+ *              "ticketType": ["0-3", "1-2"],
  *              "orderDate": "2019-04-14T12:44:36.963Z"
  *              "__v": 0
  *          }
@@ -43,8 +43,8 @@ router.get("/", async (req, res) => {
  * @apiParam {String} movieId Movie that order was made for.
  * @apiParam {String} date Date of film show.
  * @apiParam {String} time Time of film show.
- * @apiParam {String} seats Seats that was reserved with this order.
- * @apiParam {String} ticketType Type of tickets reserved.
+ * @apiParam {Array} seats Seats that was reserved with this order.
+ * @apiParam {Array} ticketType Type of tickets reserved.
  *
  * @apiSuccess {json} Order Order that was saved.
  * @apiSuccessExample Success-Response:
@@ -55,7 +55,7 @@ router.get("/", async (req, res) => {
  *          "date": "12.05.2018",
  *          "time": "20:00",
  *          "seats": ["1-1", "1-2", "1-3"],
- *          "ticketType": 0,
+ *          "ticketType": ["0-3", "1-2"],
  *          "orderDate": "2019-04-14T12:44:36.963Z"
  *          "__v": 0
  *      }
@@ -94,7 +94,7 @@ router.post("/", async (req, res) => {
  *          "date": "12.05.2018",
  *          "time": "20:00",
  *          "seats": ["1-1", "1-2", "1-3"],
- *          "ticketType": 0,
+ *          "ticketType": ["0-3", "1-2"],
  *          "orderDate": "2019-04-14T12:44:36.963Z"
  *          "__v": 0
  *      }
@@ -126,7 +126,7 @@ router.delete("/:id", async (req, res) => {
  *          "date": "12.05.2018",
  *          "time": "20:00",
  *          "seats": ["1-1", "1-2", "1-3"],
- *          "ticketType": 0,
+ *          "ticketType": ["0-3", "1-2"],
  *          "orderDate": "2019-04-14T12:44:36.963Z"
  *          "__v": 0
  *      }
