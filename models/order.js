@@ -6,8 +6,9 @@ const Order = mongoose.model(
   "Orders",
   new mongoose.Schema({
     movieId: {
-      type: Number,
-      required: true
+      type: String,
+      required: true,
+      trim: true
     },
     date: {
       type: String,
@@ -46,7 +47,7 @@ const Order = mongoose.model(
 
 function validateOrder(order) {
   const schema = {
-    movieId: Joi.number().required(),
+    movieId: Joi.string().required(),
     date: Joi.string()
       .min(8)
       .max(10)

@@ -13,7 +13,7 @@ const router = express.Router();
  *     [
  *          {
  *              "_id": "3ab30d7f1b26580016067995",
- *              "movieId": 343611,
+ *              "movieId": "343611",
  *              "date": "12.05.2018",
  *              "time": "20:00",
  *              "seats": ["1-1", "1-2", "1-3"],
@@ -51,7 +51,7 @@ router.get("/", async (req, res) => {
  *     HTTP/1.1 200 OK
  *      {
  *          "_id": "3ab30d7f1b26580016067995",
- *          "movieId": 343611,
+ *          "movieId": "343611",
  *          "date": "12.05.2018",
  *          "time": "20:00",
  *          "seats": ["1-1", "1-2", "1-3"],
@@ -90,7 +90,7 @@ router.post("/", async (req, res) => {
  *     HTTP/1.1 200 OK
  *      {
  *          "_id": "3ab30d7f1b26580016067995",
- *          "movieId": 343611,
+ *          "movieId": "343611",
  *          "date": "12.05.2018",
  *          "time": "20:00",
  *          "seats": ["1-1", "1-2", "1-3"],
@@ -122,7 +122,7 @@ router.delete("/:id", async (req, res) => {
  *     HTTP/1.1 200 OK
  *      {
  *          "_id": "3ab30d7f1b26580016067995",
- *          "movieId": 343611,
+ *          "movieId": "343611",
  *          "date": "12.05.2018",
  *          "time": "20:00",
  *          "seats": ["1-1", "1-2", "1-3"],
